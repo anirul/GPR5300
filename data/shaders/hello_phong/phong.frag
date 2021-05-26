@@ -12,7 +12,7 @@ uniform sampler2D Specular;
 
 const float ambient_strengh = 0.1;
 const float specular_strength = .5;
-const float specular_pow = 32;
+const float specular_pow = 256;
 const vec3 light_color = vec3(1.0, 1.0, 1.0);
 const vec3 light_position = vec3(0.0, 0.0, 3.0);
 
@@ -29,7 +29,7 @@ void main()
 
     // Compute specular light.
     vec3 view_direction = normalize(out_camera - out_position);
-    vec3 reflection_direction = normalize(reflect(-light_position, out_normal));
+    vec3 reflection_direction = reflect(-light_direction, out_normal);
     float spec = pow(max(dot(view_direction, reflection_direction), 0.0), specular_pow);
     vec3 specular = specular_strength * spec * light_color;
 
