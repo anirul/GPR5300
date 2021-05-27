@@ -1,6 +1,7 @@
 #include <SDL_main.h>
 #include <glad/glad.h>
 #include <array>
+#include <memory>
 #include <string>
 #include <iostream>
 #include <fstream>
