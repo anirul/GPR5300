@@ -1,5 +1,5 @@
 {
-    "cmake.buildDirectory": "${workspaceFolder}/build/${buildType}",
+    "cmake.buildDirectory": "${workspaceFolder}/build",
     "cmake.configureSettings": {
         "CMAKE_TOOLCHAIN_FILE": "${workspaceRoot}/../vcpkg/scripts/buildsystems/vcpkg.cmake"
     }
