@@ -39,5 +39,5 @@ void main()
     vec3 result_specular =
         specular * texture(Specular, out_tex).r;
     FragColor = vec4(result_diffuse_ambient + result_specular, 1.0);
-    // FragColor = vec4(out_normal, 1.0);
+    // FragColor = vec4(normal, 1.0);
 }

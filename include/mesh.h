@@ -142,6 +142,14 @@ namespace gl {
             glBindBuffer(GL_ARRAY_BUFFER, 0);
             IsError(__FILE__, __LINE__);
         }
+        void Bind()
+        {
+			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+			IsError(__FILE__, __LINE__);
+			glBindVertexArray(VAO);
+			IsError(__FILE__, __LINE__);
+        }
+
     protected:
         void IsError(const std::string& file, int line)
         {
